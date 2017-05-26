@@ -6,6 +6,4 @@ package com.cotton.doubee_admin.manager;
 public interface UCManager {
 
     void getUCVideos();
-
-    void test();
 }

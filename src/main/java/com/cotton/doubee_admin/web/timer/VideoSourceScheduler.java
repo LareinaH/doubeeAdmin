@@ -25,7 +25,7 @@ public class VideoSourceScheduler {
     /**
      * 读取uc宠物视频 - 每十分钟触发一次
      */
-    //@Scheduled(cron = "0 0/5 * * * ?")
+   @Scheduled(cron = "0 0/10 * * * ?")
     public void getUCVideosScheduler() {
 
         logger.info("获取uc视频开始……");
@@ -37,9 +37,9 @@ public class VideoSourceScheduler {
 
 
     /**
-     * 上传优酷 - 每十分钟触发一次
+     * 上传优酷 - 每十分钟触发一次 （从第五分钟开始）
      */
-    //@Scheduled(cron = "0 0/10 * * * ?")
+    @Scheduled(cron = "0 5/10 * * * ?")
     public void uploadYouKuScheduler() {
 
         logger.info("上传优酷开始……");

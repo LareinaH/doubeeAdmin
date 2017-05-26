@@ -5,6 +5,8 @@
 
 <generatorConfiguration>
 
+   <!--代码生成命令 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate-->
+
 	<!--admin-->
 
 	<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
@@ -29,73 +31,18 @@
 
 		<javaClientGenerator targetPackage="com.cotton.doubee_admin.mapper" targetProject="${basedir.src.main.java}" type="XMLMAPPER" />
 
-		<table tableName="ad_video">
+
+		<!--<table tableName="member">
 			<property name="useActualColumnNames" value="true" />
 			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
+		</table>-->
 
-
-	</context>
-
-	<!--front-->
-<!--	<context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
-		<property name="beginningDelimiter" value="`" />
-		<property name="endingDelimiter" value="`" />
-
-		<property name="javaFileEncoding" value="UTF-8"/>
-
-		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-			<property name="mappers" value="com.cotton.base.mapper.BaseMapper" />
-		</plugin>
-
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.92.29.192:3306/doubee"
-						userId="lareina" password="lareina" />
-
-		<javaModelGenerator targetPackage="com.cotton.doubee.model" targetProject="${basedir.src.main.java}" >
-			<property name="rootClass" value="com.cotton.base.model.BaseModel"/>
-			<property name="trimStrings" value="true"/>
-		</javaModelGenerator>
-
-		<sqlMapGenerator targetPackage="mapper" targetProject="${basedir.src.main.resources}" />
-
-		<javaClientGenerator targetPackage="com.cotton.doubee.mapper" targetProject="${basedir.src.main.java}" type="XMLMAPPER" />
-
-		<table tableName="member">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="member_favorite">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="member_record">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="member_setting">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="member_subscription">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="member_tag">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
+		<!--<table tableName="ad_video">-->
+			<!--<property name="useActualColumnNames" value="true" />-->
+			<!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+		<!--</table>-->
 
 		<table tableName="video">
-			<property name="useActualColumnNames" value="true" />
-			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
-		</table>
-
-		<table tableName="video_comment">
 			<property name="useActualColumnNames" value="true" />
 			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
 		</table>
@@ -105,5 +52,6 @@
 			<generatedKey column="id" sqlStatement="Mysql" identity="true" />
 		</table>
 
-	</context>-->
+	</context>
+
 </generatorConfiguration>
